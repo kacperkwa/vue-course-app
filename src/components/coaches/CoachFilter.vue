@@ -53,6 +53,7 @@ h2 {
 .filter-option label,
 .filter-option input {
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .filter-option label {
