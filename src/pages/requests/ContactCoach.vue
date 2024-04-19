@@ -37,7 +37,7 @@ export default {
         this.formIsValid = false;
         return;
       }
-      
+
       const coachId = this.$route.params.id;
       const requestData = {
         email: this.email,
@@ -45,9 +45,7 @@ export default {
         coachId: coachId,
       };
 
-      this.$store.dispatch('requests/contactCoach', {
-        requestData,
-      });
+      this.$store.dispatch('requests/contactCoach', requestData);
       this.$router.replace('/coaches');
       console.log(requestData);
     },

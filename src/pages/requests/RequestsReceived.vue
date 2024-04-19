@@ -4,13 +4,14 @@
       <header>
         <h2>Requests Recived</h2>
       </header>
-      <ul v-if="!hasRequests">
+      <ul v-if="hasRequests">
         <RequestItem
           v-for="req in receivedRequests"
           :key="req.id"
           :email="req.userEmail"
           :message="req.message"
-        ></RequestItem>
+        >
+        </RequestItem>
       </ul>
       <h3 v-else>You haven't recived any request yet!</h3>
     </BaseCard>
