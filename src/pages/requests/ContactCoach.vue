@@ -47,7 +47,6 @@ export default {
 
       this.$store.dispatch('requests/contactCoach', requestData);
       this.$router.replace('/coaches');
-      console.log(requestData);
     },
   },
 };
