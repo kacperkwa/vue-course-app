@@ -1,4 +1,5 @@
 <template>
+  <div>
   <section>
     <BaseCard>
       <h2>
@@ -23,6 +24,7 @@
       <router-view></router-view>
     </BaseCard>
   </section>
+</div>
 </template>
 <script>
 export default {
