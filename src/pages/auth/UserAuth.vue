@@ -7,10 +7,10 @@
       </div>
       <div class="form-control">
         <label for="password">Password</label>
-        <input type="text" id="password" v-model="password" />
+        <input type="password" id="password" v-model="password" />
       </div>
       <p v-if="!formIsValid">
-        Please enter a valid email and password(must be at least 6 characters
+        Please enter a valid email and password (must be at least 6 characters
         long)
       </p>
       <BaseButton>{{ submitButtonCaption }}</BaseButton>
