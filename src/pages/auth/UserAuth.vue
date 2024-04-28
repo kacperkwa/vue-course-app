@@ -79,7 +79,7 @@ export default {
           await this.$store.dispatch('signup', actionPayload);
         }
       } catch (err) {
-        this.error = err.message || 'Failed to authenticate, try later';
+        this.error = err.message || 'Failed to authenticate, try later.';
       }
 
       this.isLoading = false;
