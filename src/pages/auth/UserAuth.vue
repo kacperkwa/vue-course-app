@@ -18,7 +18,7 @@
         </div>
         <p v-if="!formIsValid">
           Please enter a valid email and password (must be at least 6 characters
-          long)
+          long).
         </p>
         <BaseButton>{{ submitButtonCaption }}</BaseButton>
         <BaseButton type="button" mode="flat" @click="switchOfMode">{{
