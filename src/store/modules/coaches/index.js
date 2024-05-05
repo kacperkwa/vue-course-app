@@ -8,15 +8,6 @@ export default {
       lastFetch: null,
       coaches: [
         {
-          id: 'c1',
-          firstName: 'Lea',
-          lastName: 'Schwarz',
-          areas: ['frontend', 'backend', 'career'],
-          description:
-            "I'm Maximilian and I've worked as a freelance web developer for years. Let me help you become a developer as well!",
-          hourlyRate: 35,
-        },
-        {
           id: 'c2',
           firstName: 'Julie',
           lastName: 'Jones',
