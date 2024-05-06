@@ -6,17 +6,7 @@ export default {
   state() {
     return {
       lastFetch: null,
-      coaches: [
-        {
-          id: 'c2',
-          firstName: 'Julie',
-          lastName: 'Jones',
-          areas: ['frontend', 'career'],
-          description:
-            'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-          hourlyRate: 30,
-        },
-      ],
+      coaches: [],
     };
   },
   mutations,
