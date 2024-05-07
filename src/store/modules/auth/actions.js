@@ -32,7 +32,7 @@ export default {
     const responseData = await response.json();
     if (!response.ok) {
       const error = new Error(
-        responseData.message || 'Failed to authenticate. Check your login data.'
+        responseData.message || 'Failed to authenticate. Please check your login data.'
       );
       throw error;
     }
