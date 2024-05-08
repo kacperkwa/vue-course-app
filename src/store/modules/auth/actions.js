@@ -1,6 +1,6 @@
 export default {
   async login(context, payload) {
-   return context.dispatch('auth', {
+    return context.dispatch('auth', {
       ...payload,
       mode: 'login',
     });
@@ -32,11 +32,14 @@ export default {
     const responseData = await response.json();
     if (!response.ok) {
       const error = new Error(
-        responseData.message || 'Failed to authenticate. Please check your login data.'
+        responseData.message ||
+          'Failed to authenticate. Please check your login data.'
       );
       throw error;
     }
-    console.log(responseData);
+    localStorage.setItem('token', responseData.idToken);
+    localStorage.setItem('userId', responseData.localId);
+
     context.commit('setUser', {
       token: responseData.idToken,
       userId: responseData.localId,
@@ -44,6 +47,17 @@ export default {
     });
   },
 
+  tryLogin(context) {
+    const token = localStorage.getItem('token');
+    const userId = localStorage.getItem('userId');
+    if (token && userId) {
+      context.commit('setUser', {
+        token: token,
+        userId: userId,
+        tokenExpiration: null,
+      });
+    }
+  },
   logout(context) {
     context.commit('setUser', {
       token: null,
