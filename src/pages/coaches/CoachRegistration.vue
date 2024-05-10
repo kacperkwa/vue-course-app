@@ -1,7 +1,7 @@
 <template>
   <section>
     <BaseCard>
-      <h2>Register as a coach now!</h2>
+      <h2>Register as a coach now.</h2>
       <CoachForm @save-data="saveData"></CoachForm>
     </BaseCard>
   </section>
