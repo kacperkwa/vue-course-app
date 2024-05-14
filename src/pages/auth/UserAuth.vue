@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseDialog :show="!!error" title="An error ocurred" @close="handleError">
+    <BaseDialog :show="!!error" title="An error ocurred:" @close="handleError">
       <p>{{ error }}</p>
     </BaseDialog>
     <BaseDialog fixed :show="isLoading" title="Authenticating..">
